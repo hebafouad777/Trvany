@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1025503190397",
+    "firebase_url": "https://trvany-f4b19.firebaseio.com",
+    "project_id": "trvany-f4b19",
+    "storage_bucket": "trvany-f4b19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025503190397:android:8853ad2572e9f3ad",
+        "android_client_info": {
+          "package_name": "com.mediaoasis.trvany"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025503190397-soi3vio2snfj5v6detuhm189p9k2eekq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz8S4b9-kS8QrEOGZ1iZaEQ6fH-rzO1UI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

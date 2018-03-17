@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="430dp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical|end">
+
+        <Button
+            android:id="@+id/butttonFilterClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/close" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:background="@color/gray_bg"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/spinnerFilterCountry"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:background="@color/gray_bg"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/spinnerFilterCities"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></Spinner>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:background="@color/gray_bg"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/prog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp" />
+
+
+        <Spinner
+            android:id="@+id/spinnerFilterArea"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></Spinner>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:background="@color/gray_bg"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/spinnerFilterPropertyType"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/gray_bg"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/spinnerFilterOffer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:background="@color/gray_bg"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/spinnerFilterPriceRange"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/butttonFilterSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/green"
+            android:text="@string/apply_filters"
+            android:textColor="@color/white"></Button>
+    </LinearLayout>
+</LinearLayout>

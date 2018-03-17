@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jaxi0</string>
+
+    <string name="google_maps_key">AIzaSyA5NmvGi2bGLxAALMJJyeKzG4o16x39UWc</string>
+    <string name="google_maps_directions_key">AIzaSyAdxZk7HspYTEnmmKwR85ji4Bvozg6tpbc</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Merhaba boş parça</string>
+    <string name="sign_in">Giriş Yap</string>
+    <string name="sign_up">Kaydol</string>
+    <string name="username">Tam İsim</string>
+    <string name="email">E-posta</string>
+    <string name="confirm_password">Parolayı Onayla</string>
+    <string name="password">Parola</string>
+    <string name="phone_number">Telefon Numarası</string>
+    <string name="forget_your_password">Paralomı unuttum?</string>
+    <string name="reset_password">Parlayı Sıfırla</string>
+    <string name="send">Gönder</string>
+    <string name="no_internet_con">İnternet Bağlantısı Yok...</string>
+    <string name="empty_email">E-posta Boş</string>
+    <string name="empty_password">Parola Boş</string>
+    <string name="loading">Yükleniyor....</string>
+    <string name="service_taxi">Servis Taksi</string>
+    <string name="get_ride">Bin</string>
+    <string name="title_activity_main">Ana Sayfa</string>
+
+    <string name="navigation_drawer_open">Navigasyon çekmecesini aç</string>
+    <string name="navigation_drawer_close">Navigasyon çekmecesini kapat</string>
+    <string name="openDrawer">çekmeceyi_aç</string>
+    <string name="closeDrawer">çekmeceyi_kapat</string>
+
+    <string name="action_settings">Ayarlar</string>
+    <string name="nav_history">Geçmiş</string>
+
+    <string name="action_clear_all">Hepsini Temizle</string>
+    <string name="action_mark_all_read">Hepsini Okundu Olarak İşaretle</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Mülk Ara</string>
+    <string name="nav_orders">Randevular</string>
+    <string name="nav_messages">Mesajlar</string>
+    <string name="nav_profile">Profil</string>
+    <string name="nav_settings">Ayarlar</string>
+    <string name="nav_change_password">Parolayı Değiştir</string>
+    <string name="nav_signout">Çıkış Yap</string>
+    <string name="delete_account">Hesabı Sil</string>
+    <string name="save_changes">Değişiklikleri Kaydet</string>
+    <string name="submit_new_password"> YENİ ŞİFRE GÖNDER</string>
+    <string name="repeat_new_password">Yeni Şifreyi Tekrarla</string>
+    <string name="new_password">Yeni Şifre</string>
+    <string name="old_password">Eski Şifre</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Emlak Ara</item>
+        <item>Randevular</item>
+        <item>Mesajlar</item>
+        <item>Profil</item>
+        <item>Ayarlar</item>
+        <item>Geçmiş</item>
+        <item>Çıkış yap</item>
+    </string-array>
+
+    <string-array name="nav_item_activity2_titles">
+        <item>@string/my_properties</item>
+        <item>Randevular</item>
+        <item>Mesajlar</item>
+        <item>Profil</item>
+        <item>Ayarlar</item>
+        <item>Geçmiş</item>
+        <item>Çıkış yap</item>
+    </string-array>
+
+    <string name="gps_enable"> GPS devre dışı, Konumunuzu bulmak için lütfen GPS\'i etkinleştirin</string>
+    <string name="ok">TAMAM</string>
+    <string name="cancel">İptal Et</string>
+    <string name="my_location">Alınış Yerim</string>
+    <string name="request_a_driver">Bir Şoför İste</string>
+    <string name="submit">GÖNDER</string>
+    <string name="write_a_hint_place">ip ucu yeri yazın</string>
+    <string name="yes_please">EVET, LÜTFEN!</string>
+    <!--<string name="title_activity_select_driver">SelectDriverActivity</string>-->
+    <string name="login">Giriş</string>
+    <string name="pickup_location">Alınış Yeri</string>
+    <string name="my_properties">Mülklerim</string>
+    <string name="history">Geçmiş</string>
+    <string name="address">Adres</string>
+    <string name="nav_noti">Bildirimler</string>
+    <string name="create_order">Sipariş Yarat</string>
+    <string name="push_notifications"> Uygulamayı Anında Bildirimler Göndermek için Etkinleştir</string>
+    <string name="settings_updated">Ayarlar Güncellendi!</string>
+    <!--<string name="price_per_month">Her Ay Fiyatı</string>-->
+    <string name="price">Fiyat</string>
+    <string name="confirm_term_error"> Yukarıdaki terim üzerinde Teyit etmelisiniz </string>
+    <string name="all_areas">Bütün Alanlar</string>
+    <!--<string name="sell">Bayan</string>-->
+    <!--<string name="rent">Erkekler</string>-->
+    <!--<string name="studio">saç modeli</string>-->
+    <!--<string name="flat">SPA</string>-->
+    <!--<string name="villa">Vücut bakımı</string>-->
+    <!--<string name="land">buhar banyosu</string>-->
+    <string name="select_image">bir imaj seçin..</string>
+    <string name="property_location_error">Lütfen Mülkünüz için bir Konum Seçin</string>
+    <string name="upload_failed">Yükleme Başarısız..</string>
+    <string name="uploaded_success">Başarılı bir şekilde Yüklendi..</string>
+    <string name="percent_uploaded">% yüklendi</string>
+    <string name="error_happened">Hata oluştu:</string>
+    <string name="please_wait">Lütfen Bekleyin</string>
+    <string name="welcome">Hoşgeldiniz,</string>
+    <string name="account_activation_error">Hesabınız Henüz Etkinleştirilmedi!</string>
+    <string name="egypt">Mısır</string>
+    <string name="egp">MSR</string>
+    <string name="ksa">Suudi Arabistan</string>
+    <string name="sar">SA</string>
+    <string name="property_no_requests">Bu mülkün hiç isteği yok</string>
+    <string name="this_property_has">Bu mülk sahip</string>
+    <string name="request">İstek</string>
+    <string name="this_property_have">Bu mülk sahip</string>
+    <string name="requests">İstek</string>
+    <string name="location_permission_error"> Konumunuzu haritada göstermek için İzinler gerekiyor</string>
+    <string name="cant_get_pickup">Alınış yeri ve adresi aldım/alamadım!</string>
+    <string name="permission_not_granted"> İzin verilmedi</string>
+    <string name="client_name">Müşteri Adı :</string>
+    <string name="pickup_sign">Alınış Yeri İşareti :</string>
+    <string name="pending_approval"> Onay Bekleyen</string>
+    <string name="approved">Onaylandı</string>
+    <string name="waiting_your_approval">Onayınızı Bekliyor</string>
+    <string name="you_canceled_order">Siparişi iptal ettiniz</string>
+    <string name="canceled_by_broker">Aracı tarafından İptal Edildi</string>
+    <string name="canceled_by_user">Müşteri tarafından İptal Edildi</string>
+    <string name="action">HAREKET</string>
+    <string name="no_changes_to_apply"> Başvuruda Değişiklik Yapılmadı!</string>
+    <string name="appointment_edited">Randevu Başarılı bir şekilde Düzenlendi!</string>
+    <string name="apply_changes">Değişiklikleri Uygula</string>
+    <string name="edit_failed">Düzenleme Başarısız!</string>
+    <string name="cancel_request_question">Bu isteği iptal etmek istiyor musunuz?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="order_canceled">Sipariş Başarılı bir şekilde İptal Edildi..</string>
+    <string name="order_cancel_failed">Sipariş İsteği Başarısız Oldu, Tekrar Deneyin!</string>
+    <string name="approve_order_question"> Bu isteği onaylamak istiyor musunuz?</string>
+    <string name="order_approved">Sipariş Başarılı bir şekilde Onaylandı..</string>
+    <string name="failed_to_approve_order"> Sipariş İsteği Başarısız Oldu! </string>
+    <string name="call_permission_needed"> Çağrı ayarlamanızı göstermek için Çağrı İzinleri gereklidir</string>
+    <string name="delete_property_question"> Bu mülkü kalıcı olarak silmek istiyor musunuz?</string>
+    <string name="delete_property">Mülkü Sil</string>
+    <string name="cancel_requests"> Lütfen, isteklerinizi iptal edin ve tekrar deneyin...</string>
+    <string name="you_have">Sizin</string>
+    <string name="requests_from_clients">müşterilerden isteğiniz var!</string>
+    <string name="property_deleted">Property Deleted Successfully!</string>
+    <string name="property_delete_failed">Mülkü silme başarısız oldu..</string>
+    <string name="required">Gerekli</string>
+    <string name="msg_send_err">Mesaj gönderilemedi, lütfen tekrar deneyin</string>
+    <string name="location_shared">Konum Başarılı bir şekilde Paylaşıldı</string>
+    <string name="upload_image">İmaj Yükle</string>
+    <string name="sent_success">Başarılı bir şekilde Gönderildi..</string>
+    <string name="cancel_appointment">Randevuyu İptal Et</string>
+    <string name="approve_order">Siparişi Onayla</string>
+    <string name="mark_as_complete">Tamamlanmamış olarak işaretle</string>
+    <string name="order_is_done">Sipariş verildi mi?</string>
+    <string name="order_complete_question">Bu siparişi tamamlanmış olarak işaretlemek ister misiniz?</string>
+    <string name="order_is_complete">Sipariş Başarılı bir şekilde Ayarlandı..</string>
+    <string name="order_complete_failed">Tamamlandı olarak işaretleme Başarısız oldu, Tekrar Deneyin!</string>
+    <string name="score">Puan :</string>
+    <string name="review_empty">görüş alanı boş!</string>
+    <string name="you_didnot_rate_broker">aracıyı oyladınız/oylamadınız</string>
+    <string name="posting_rate">Oyunuz Gönderiliyor...</string>
+    <string name="latitude">Enlem :</string>
+    <string name="longitude"> Boylam :</string>
+    <string name="create_order_question"> Bu mülkü görüntüleme isteği oluşturmak istiyor musunuz?</string>
+    <string name="request_order_failed">Sipariş İsteği Başarısız Oldu, Tekrar Deneyin!</string>
+    <string name="something_went_wrong">Birşeyler Ters Gitti...</string>
+    <string name="order_fees_will_be">Sipariş ücretleri</string>
+    <string name="do_you_want_to_confirm"> Siparişi Onaylamak İstiyor musunuz?</string>
+    <string name="no_results_found">Hiç Sonuç Bulunamadı!</string>
+    <string name="requests_found">İstekler Bulundu!</string>
+    <string name="conversations_found">Görüşmeler Bulundu!</string>
+    <string name="no_conversations">Henüz Hiç Görüşme Yok!</string>
+    <string name="history_found">Geçmişte Randevu Bulundu!</string>
+    <string name="no_history_yet">Henüz Hiç Geçmiş Yok!</string>
+    <string name="properties_found">Mülkler Bulundu!</string>
+    <string name="login_failed">Giriş Başarısız,</string>
+    <string name="sign_in_as_a_user"> Hesabınız kullanıcı olarak kayıtlı !, Lütfen bir Kullanıcı olarak Giriş Yapın. </string>
+    <string name="real_state_broker">Emlak Aracısı</string>
+    <string name="freelancer_broker">Freelancer Aracı</string>
+    <string name="property_owner">Mülk Sahibi</string>
+    <string name="register_failed">Kayıt başarısız,</string>
+    <string name="add_company_logo">Şirket logosu eklemelisiniz..</string>
+    <string name="password_not_matched"> Parola yukarıdaki parola ile eşleşmiyor</string>
+    <string name="agree_terms"> Şartlar ve Koşulları Kabul Etmelisiniz!</string>
+    <string name="data_saved">Bilgi Başarılı bir şekilde Kaydedildi!</string>
+    <string name="account_deleted">Hesap silindi</string>
+    <string name="search_real_state">EMLAK ARA</string>
+    <string name="updating_settings">Ayarlarınız Güncelleniyor....</string>
+    <string name="add_new_property">YENİ MÜLK EKLE</string>
+    <string name="add_your_property_details_below">Mülk detaylarınızı aşağıda ekleyin</string>
+    <string name="area">Bölge</string>
+    <string name="property_location">Mülk Konumu</string>
+    <string name="describe_your_property">Mülkünüzü tarif edin</string>
+    <string name="add_property">Mülk ekle</string>
+    <string name="broker_info">ARACI BİGİSİ</string>
+    <string name="the_broker_s_reviews">Aracının Görüşleri</string>
+    <string name="scheudle_a_broker_pickup">BİR ARACI ALINIŞI PLANLA</string>
+    <string name="call_broker">Aracıyı Ara</string>
+    <string name="start_chat">Konuşmaya Başla</string>
+    <string name="chat">Konuşma</string>
+    <string name="appointment_details">RANDEVU DETAYLARI</string>
+    <string name="appointment_details_2">Randevu Detayları</string>
+    <string name="your_pickup_location">Alınış Konumunuz</string>
+    <string name="pickup_featured_name">ALINIŞ ÖZELLİĞİ ADI</string>
+    <string name="pickup_address">ALINIŞ ADRESİ</string>
+    <string name="no_sign_indicated">HİÇ İŞARET BELİRTİLMEDİ</string>
+    <string name="change">Değiştir</string>
+    <string name="your_booking_details">Rezarvasyon Detaylarınız</string>
+    <string name="remind_me">Beni Hatırla</string>
+    <string name="update_appointment_data">Randevu Bilgisini Güncelle</string>
+    <string name="your_pickup_location_2">ALINIŞ KONUMUNUZ</string>
+    <string name="your_current_location">MEVCUT KONUMUNUZ</string>
+    <string name="change_pickup_place">Alınış Yerini Değiştir</string>
+    <string name="add_sign">İşaret Ekle</string>
+    <string name="next">SIRADAKİ</string>
+    <string name="property_details">MÜLK DETAYLARI</string>
+    <string name="this_property_is_offered_by"> Bu özellik, tarafından önerildi</string>
+    <string name="broker_name">aracı adı</string>
+    <string name="broker_address">aracı adresi</string>
+    <string name="property_title">Mülk başlığı..</string>
+    <string name="country">Ülke</string>
+    <string name="city">Şehir</string>
+    <string name="offer">Öner</string>
+    <string name="properties_offered_by">Mülkler tarafından önerildi</string>
+    <string name="scheudle_a_pickup_for_this_property">BU MÜLK İÇİN BİR ALINIŞ PLANLA</string>
+    <string name="property_type">Mülk Türü</string>
+    <string name="type">Tür</string>
+    <string name="offer_type">Öneri Türü</string>
+    <string name="loading_requests">İstek Yükleniyor.....</string>
+    <string name="edit_property">Mülkü Düzenle</string>
+    <string name="property_location_2">MÜLK KONUMU</string>
+    <string name="done">Yapıldı</string>
+    <string name="appointment_date_and_time">Randevu tarihi ve saati</string>
+    <string name="call_client">Müşteriyi Ara</string>
+    <string name="schedule_your_pickup">ALINIŞINI PLANLA</string>
+    <string name="save">KAYDET</string>
+    <string name="search_for_property">MÜLK ARA</string>
+    <string name="search_filters">Arama Filtreleri</string>
+    <string name="map_view">Harita Görünüşü</string>
+    <string name="list_view">Liste görünüşü</string>
+    <string name="edit_property_2">MÜLKÜ DÜZENLE</string>
+    <string name="are_you_a_real_state_agent"> Emlakçı mısınız?</string>
+    <string name="access_as_an_agent">Emlakçı olarak Giriş Yapın</string>
+    <string name="attach_image">Resim Ekleyin</string>
+    <string name="share_your_location">Konumunuzu Paylaşın</string>
+    <string name="change_pickup_location">Alınış Konumunu Değiştirin</string>
+    <string name="confirm_edit">Düzenlemeyi Onayla</string>
+    <string name="do_you_confirm_editing_this_appointment">Bu randevuyu düzenlediğinizi onaylıyor musunuz?</string>
+    <string name="confirm">Onayla</string>
+    <string name="delete_image">Resmi Sil</string>
+    <string name="do_you_want_to_delete_this_image">Bu resmi silmek istiyor musunuz?</string>
+    <string name="delete">Sil</string>
+    <string name="deleting">siliniyor ...</string>
+    <string name="write_your_email">E-postanızı yazın</string>
+    <string name="i_confirm_hereby_that_i_will_pay_2_5_to_ossul_real_estate_from_any_deal_i_do_through_ossul_app"> Jaxi uygulamasıyla yaptığım her anlaşma ile Ossul gayrimenkulüne% 1 ödemeyi kabul ediyorum.</string>
+    <string name="order_fees">Sipariş Ücretleri</string>
+    <string name="calculating_order_fees">Sipariş Ücretleri Hesaplanıyor...</string>
+    <string name="confirm_order">Siparişi Onayla</string>
+    <string name="show_details">Detayları Göster</string>
+    <string name="describtion">tanım</string>
+    <string name="rate_broker">Aracıyı Oyla</string>
+    <string name="rate_this_broker_and_its_service_offered_to_you"> Bu komisyoncuyu ve size sunduğu hizmeti oylayın</string>
+    <string name="write_your_feedback">Geribildiriminizi Yazın</string>
+    <string name="enter_your_new_password">Yeni Parolanızı Girin</string>
+    <string name="apply_filters">Filtreleri Uygula</string>
+    <string name="add_a_significant_sign"> BELİRLİ İŞARETLER EKLEYİN </string>
+    <string name="signing_in">Giriş Yapılıyor</string>
+    <string name="signing_up">Kayıt Yapılıyor</string>
+    <string name="thank_you">Teşekkür Ederiz!</string>
+    <string name="your_request_to_join_ossul_is_being_reviewed_at_the_moment"> Ossul\'a katılma isteğiniz şu an gözden geçirilmekte</string>
+    <string name="you_will_be_notified_shortly"> Kısa bir süre içinde sizden bilgilendirileceksiniz</string>
+    <string name="change_date">Tarihi Değiştir</string>
+    <string name="updating_property">Mülk Güncelleniyor</string>
+    <string name="uploading_image">Resim Yükleniyor</string>
+    <string name="waiting_approval">Onay Bekleniyor</string>
+    <string name="find_any_property_and_get_picked_by_nthe_broker_from_your_place"> Herhangi bir mülk bulun ve bulunduğunuz yerden aracı tarafından alının…</string>
+    <string name="advanced_search"><u>Gelişmiş Arama</u></string>
+    <string name="change_password">Parolayı Değiştir</string>
+    <string name="signing_up_as_a_real_state"> Emlakçı olarak kaydolmak için Ossul tarafından doğrulama ve onay alınması gerekiyor</string>
+    <string name="upload_your_photo_company_logo">Reminizi/şirket logonuzu yükleyin</string>
+    <string name="i_agree_to_the_terms_and_conditions">Şartları ve koşulları kabul ediyorum.</string>
+    <string name="name">İsim</string>
+    <string name="capture_new_photo">Yeni Fotoğraf Çekin</string>
+    <string name="pick_from_gallery">Galeriden Seçin</string>
+    <string name="results_found">Sonuçlar Bulundu!</string>
+    <string name="edit_appointment">Siparişi düzenleme</string>
+    <string name="edit_appointment_question">Siparişi düzenlemek istediğinizden emin misiniz?</string>
+    <string name="title">Başlık</string>
+    <string name="create_new_account">Please, create a new account as a provider..</string>
+    <string name="good_luck">نتمنى لكم التوفيق</string>
+    <string name="thank_you_joining_jaxi">شكرا لانضمامك لفريق جاكسي</string>
+    <string name="name_empty">Name is Empty</string>
+    <string name="phone_empty">Phone is Empty</string>
+    <string name="let_s_start">Let\'s Start</string>
+
+</resources>
+

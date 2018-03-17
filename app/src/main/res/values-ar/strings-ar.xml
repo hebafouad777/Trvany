@@ -1,0 +1,295 @@
+<resources>
+    <string name="app_name">ترافني</string>
+
+    <string name="google_maps_key">AIzaSyA5NmvGi2bGLxAALMJJyeKzG4o16x39UWc</string>
+    <string name="google_maps_directions_key">AIzaSyAdxZk7HspYTEnmmKwR85ji4Bvozg6tpbc</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in">تسجيل دخول</string>
+    <string name="sign_up">تسجيل جديد</string>
+    <string name="username">الأسم بالكامل</string>
+    <string name="email">الإيميل</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="password">كلمة المرور</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="forget_your_password">نسيت كلمة المرور؟</string>
+    <string name="reset_password">اعادة تسجيل كلمة المرور</string>
+    <string name="send">ارسال</string>
+    <string name="no_internet_con">لا يوجد اتصال بالأنترنت…</string>
+    <string name="empty_email">البريد الإلكتروني مفقود</string>
+    <string name="loading">جاري التحميل…</string>
+    <string name="service_taxi">ترفاني</string>
+    <string name="get_ride">طلب القطعة</string>
+    <string name="title_activity_main">الرئيسية</string>
+
+    <string name="navigation_drawer_open">فتح القائمة</string>
+    <string name="navigation_drawer_close">اغلاق القائمة</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <string name="action_settings">الإعدادات</string>
+    <string name="nav_history">تاريخ الطلبات</string>
+
+    <string name="action_clear_all">مسح الكل</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">البحث عن اثاث</string>
+    <string name="nav_orders">المواعيد</string>
+    <string name="nav_messages">الرسائل</string>
+    <string name="nav_profile">الملف الشخصي</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="nav_change_password">تغيير كلمة المرور</string>
+    <string name="nav_signout">تسجيل خروج</string>
+    <string name="delete_account">مسح الحساب</string>
+    <string name="save_changes">حفظ التغييرات</string>
+    <string name="submit_new_password">تسحيل كلمة المرور الجديدة</string>
+    <string name="repeat_new_password">اعد كتابة كلمة المرور</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
+    <string name="old_password">كلمة المرور القديمة</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>البحث عن اثاث</item>
+        <item>المواعيد</item>
+        <item>الرسائل</item>
+        <item>الملف الشخصي</item>
+        <item>الإعدادات</item>
+        <item>تاريخ المواعيد</item>
+        <item>تسجيل خروج</item>
+    </string-array>
+
+    <string-array name="nav_item_activity2_titles">
+        <item>@string/my_properties</item>
+        <item>المواعيد</item>
+        <item>الرسائل</item>
+        <item>الملف الشخصي</item>
+        <item>الإعدادات</item>
+        <item>تاريخ المواعيد</item>
+        <item>تسجيل خروج</item>
+    </string-array>
+
+    <string name="gps_enable">يرجى تفعيل الجي بي اس</string>
+    <string name="ok">تم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="my_location">مكان الالتقاء</string>
+    <string name="request_a_driver">طلب القطعة</string>
+    <string name="submit">تأكيد</string>
+    <string name="write_a_hint_place">اكتب مكان دليلي</string>
+    <string name="yes_please">نعم، من فضلك!</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="pickup_location">مكان الالتقاء</string>
+    <string name="my_properties">اثاثي</string>
+    <string name="history">تاريخ المواعيد</string>
+    <string name="address">العنوان</string>
+    <string name="nav_noti">الاشعارات</string>
+    <string name="create_order">تحديد ميعاد</string>
+    <string name="push_notifications">تهيئة التطبيق لتلقي إشعارات</string>
+    <string name="settings_updated">تم حفظ الاعدادات</string>
+    <!--<string name="price_per_month">الايجار الشهري</string>-->
+    <string name="price">السعر</string>
+    <string name="confirm_term_error">يجب الموافقة على الشروط أعلاه</string>
+    <string name="all_areas">كل المناطق</string>
+    <!--<string name="sell">بالقطعة</string>-->
+    <!--<string name="rent">بالغرفة</string>-->
+    <!--<string name="studio">تسريحه الشعر</string>-->
+    <!--<string name="flat">سبا</string>-->
+    <!--<string name="villa">عناية كاملة بالجسم</string>-->
+    <!--<string name="land">حمام بخار</string>-->
+    <string name="select_image">اختر صورة..</string>
+    <string name="property_location_error">اختر موقع الاثاث من فضلك</string>
+    <string name="upload_failed">لقد فشل الرفع الى الخادم</string>
+    <string name="uploaded_success">تم الرفع الى الخادم..</string>
+    <string name="percent_uploaded">% تم رفعه</string>
+    <string name="error_happened">حدث الخطأ: </string>
+    <string name="please_wait">الرجاء الإنتظار</string>
+    <string name="welcome">مرحبا، </string>
+    <string name="account_activation_error">عذراً، لم يتم تفعيل حسابك الى الآن..</string>
+    <string name="egypt">مصر</string>
+    <string name="egp">جنيه</string>
+    <string name="ksa">المملكة السعودية</string>
+    <string name="sar">ريال</string>
+    <string name="property_no_requests">هذه القطعة/الغرفة لم تطلب بعد</string>
+    <string name="this_property_has">هذه الخدمة لديها</string>
+    <string name="request">طلب</string>
+    <string name="this_property_have">هذه القطعة/الغرفة لديها</string>
+    <string name="requests">طلبات</string>
+    <string name="location_permission_error">تصريحات تحديد الموقع مطلوبة لإظهار الموقع على الخريطة</string>
+    <string name="cant_get_pickup">لم يتم العثور على عنوان الموقع</string>
+    <string name="permission_not_granted">لم يتم التصريح لتحديد الموقع</string>
+    <string name="client_name">أسم العميل: </string>
+    <string name="pickup_sign">علامة مكان الألتقاء: </string>
+    <string name="pending_approval">في انتظار الموافقة</string>
+    <string name="approved">تم الأتفاق</string>
+    <string name="waiting_your_approval">في انتظار موافقتك</string>
+    <string name="you_canceled_order">تم الإلغاء</string>
+    <string name="canceled_by_broker">ألغي بواسطة البائع</string>
+    <string name="canceled_by_user">ألغي بواسطة العميل</string>
+    <string name="action">إجراء</string>
+    <string name="no_changes_to_apply">لا يوجد تغييرات!</string>
+    <string name="appointment_edited">تم تعديل الموعد بنجاح</string>
+    <string name="apply_changes">حفظ التغييرات</string>
+    <string name="edit_failed">لم يتم التعديل!</string>
+    <string name="cancel_request_question">هل تريد إلغاء الموعد؟</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="order_canceled">تم إلغاء الموعد</string>
+    <string name="order_cancel_failed">لم يتم إنشاء موعد! حاول مرة اخرى</string>
+    <string name="approve_order_question">هل تريد تأكيد الموعد؟</string>
+    <string name="order_approved">تم تأكيد الموعد بنجاح!</string>
+    <string name="failed_to_approve_order">لم يتم تأكيد الموعد، حاول مرة اخرى..</string>
+    <string name="call_permission_needed">تصاريح الأتصال مطلوبة لإجراء المكالمة</string>
+    <string name="delete_property_question">هل تريد مسح الطلب نهائياً</string>
+    <string name="delete_property">مسح الخدمة</string>
+    <string name="cancel_requests">من فضلك قم بإلغاء المواعيد على هذه القطعة/الغرفة أولاً</string>
+    <string name="you_have">لديك</string>
+    <string name="requests_from_clients">مواعيد من عملائك</string>
+    <string name="property_deleted">تم مسح الطلب بنجاح!</string>
+    <string name="property_delete_failed">لم يتم ألغاء الخدمة، حاول مرة اخرى..</string>
+    <string name="required">مطلوب</string>
+    <string name="msg_send_err">لم يتم الإرسال، حاول مرة اخرى..</string>
+    <string name="location_shared">تم مشاركة الموقع</string>
+    <string name="upload_image">إرسال صورة</string>
+    <string name="sent_success">تم الإرسال بنجاح!</string>
+    <string name="cancel_appointment">إلغاء الموعد</string>
+    <string name="approve_order">تأكيد الموعد</string>
+    <string name="mark_as_complete">تم الالتقاء</string>
+    <string name="order_is_done">هل تم الالتقاء بنجاح؟</string>
+    <string name="order_complete_question">هل تم الالتقاء بنجاح</string>
+    <string name="order_is_complete">تم تسجيل الالتقاء</string>
+    <string name="order_complete_failed">لم يتم تسجيل الالتقاء، حاول مرة اخرى..</string>
+    <string name="score">التقييم: </string>
+    <string name="review_empty">التقييم مفقود!</string>
+    <string name="you_didnot_rate_broker">لم تقم بتقييم الخدمة</string>
+    <string name="posting_rate">جاري تسجيل تقييمك</string>
+    <string name="latitude">خط طول: </string>
+    <string name="longitude">دائرة عرض: </string>
+    <string name="create_order_question">هل تريد تحديد موعد للخدمة؟</string>
+    <string name="request_order_failed">لم يتم حفظ الموعد، حاول مرة اخرى..</string>
+    <string name="something_went_wrong">حدث خطأ ما، حاول مرة اخرى..</string>
+    <string name="order_fees_will_be">تكاليف الخدمة </string>
+    <string name="do_you_want_to_confirm">هل تريد التأكيد؟</string>
+    <string name="no_results_found">لا يوجد نتائج للبحث</string>
+    <string name="requests_found">مواعيد وجدت</string>
+    <string name="conversations_found">محادثات وجدت</string>
+    <string name="no_conversations">لا يوجد محادثات بعد</string>
+    <string name="history_found">مواعيد سابقة وجدت</string>
+    <string name="no_history_yet">لا يوجد مواعيد سابقة بعد</string>
+    <string name="properties_found">خدمات وجدت</string>
+    <string name="login_failed">لم يتم تسجيل الدخول بنجاح، </string>
+    <string name="sign_in_as_a_user">هذا الحساب مسجل كمستخدم، </string>
+    <string name="real_state_broker">متجر اثاث</string>
+    <string name="freelancer_broker">بائع اثاث حر</string>
+    <string name="property_owner">صاحب اثاث</string>
+    <string name="register_failed">لم يتم التسجيل، </string>
+    <string name="add_company_logo">لابد من إدخال صورة للمتجر او لك</string>
+    <string name="password_not_matched">كلمة المرور غير متطابقة مع كلمة المرور اعلاه</string>
+    <string name="agree_terms">لابد من الموافقة على الشروط والاحكام اولاً</string>
+    <string name="data_saved">تم حفظ البيانات</string>
+    <string name="account_deleted">تم حذف الحساب</string>
+    <string name="search_real_state">البحث عن اثاث</string>
+    <string name="updating_settings">جاري تعديل الإعدادات…</string>
+    <string name="add_new_property">إضافة اثاث جديد</string>
+    <string name="add_your_property_details_below">اضف تفاصيل الاثاث</string>
+    <string name="area">المنطقة</string>
+    <string name="property_location">موقع المتجر</string>
+    <string name="describe_your_property">اوصف اثاثك</string>
+    <string name="add_property">اضف القطعة/الغرفة</string>
+    <string name="broker_info">معلومات حول البائع</string>
+    <string name="the_broker_s_reviews">تقييمات للبائع</string>
+    <string name="scheudle_a_broker_pickup">تحديد موعد للخدمة</string>
+    <string name="call_broker">اتصل بالبائع</string>
+    <string name="start_chat">بدأ المحادثة</string>
+    <string name="chat">المحادثة</string>
+    <string name="appointment_details">تفاصيل الموعد</string>
+    <string name="appointment_details_2">تفاصيل الموعد</string>
+    <string name="your_pickup_location">مكان الالتقاء</string>
+    <string name="pickup_featured_name">أسم مكان الالتقاء</string>
+    <string name="pickup_address">عنوان مكان الالتقاء</string>
+    <string name="no_sign_indicated">لا يوجد علامة مميزة</string>
+    <string name="change">تغيير</string>
+    <string name="your_booking_details">تفاصيل حجزك</string>
+    <string name="remind_me">ذكّرني</string>
+    <string name="update_appointment_data">تعديل بيانات الحجز</string>
+    <string name="your_pickup_location_2">مكان الالتقاء</string>
+    <string name="your_current_location">موقعك الحالي</string>
+    <string name="change_pickup_place">تغيير مكان الالتقاء</string>
+    <string name="add_sign">إضافة علامة مميزة</string>
+    <string name="next">التالي</string>
+    <string name="property_details">بيانات الاثاث</string>
+    <string name="this_property_is_offered_by">هذه الخدمة مقدم من خلال</string>
+    <string name="broker_name">اسم البائع</string>
+    <string name="broker_address">عنوان البائع</string>
+    <string name="property_title">وصف قصير للاثاث</string>
+    <string name="country">البلد</string>
+    <string name="city">المدينة</string>
+    <string name="offer">العرض</string>
+    <string name="properties_offered_by">الخدمات المقدمة من</string>
+    <string name="scheudle_a_pickup_for_this_property">تحديد موعد للخدمة</string>
+    <string name="property_type">نوع الخدمة</string>
+    <string name="type">النوع</string>
+    <string name="offer_type">نوع العرض</string>
+    <string name="loading_requests">جاري تحميل الطلبات</string>
+    <string name="edit_property">تعديل الخدمة</string>
+    <string name="property_location_2">موقع الخدمة</string>
+    <string name="done">تم</string>
+    <string name="appointment_date_and_time">تاريخ ووقت الموعد</string>
+    <string name="call_client">اتصل بالعميل</string>
+    <string name="schedule_your_pickup">ترتيب موعد الالتقاء</string>
+    <string name="save">حفظ</string>
+    <string name="search_for_property">البحث عن اثاث</string>
+    <string name="search_filters">تصفية البحث</string>
+    <string name="map_view">عرض على الخريطة</string>
+    <string name="list_view">عرض في قائمة</string>
+    <string name="edit_property_2">تعديل الخدمة</string>
+    <string name="are_you_a_real_state_agent">هل انت بائع اثاث؟</string>
+    <string name="access_as_an_agent">الدخول كبائع اثاث</string>
+    <string name="attach_image">ارفاق صورة</string>
+    <string name="share_your_location">شارك موقعك الحالي</string>
+    <string name="change_pickup_location">تغيير مكان الالتقاء</string>
+    <string name="confirm_edit">تأكيد التعديل</string>
+    <string name="do_you_confirm_editing_this_appointment">هل تريد تأكيد التعديل على الموعد؟</string>
+    <string name="confirm">تأكيد</string>
+    <string name="delete_image">مسح الصورة</string>
+    <string name="do_you_want_to_delete_this_image">هل تريد مسح الصورة؟</string>
+    <string name="delete">مسح</string>
+    <string name="deleting">جاري المسح..</string>
+    <string name="write_your_email">ادخل الايميل</string>
+    <string name="i_confirm_hereby_that_i_will_pay_2_5_to_ossul_real_estate_from_any_deal_i_do_through_ossul_app">أقر بدفع نسبة 1% من أي اتفاق مع عملاء من خلال تطبيق "ترفاني"</string>
+    <string name="order_fees">تكلفة الخدمة</string>
+    <string name="calculating_order_fees">جاري حساب تكلفة الخدمة…</string>
+    <string name="confirm_order">تأكيد الموعد</string>
+    <string name="show_details">اظهر التفاصيل</string>
+    <string name="describtion">الوصف</string>
+    <string name="rate_broker">قيّم البائع</string>
+    <string name="rate_this_broker_and_its_service_offered_to_you">قيّم البائع والخدمة المقدمة لك</string>
+    <string name="write_your_feedback">اكتب ملاحظاتك</string>
+    <string name="enter_your_new_password">ادخل كلمة المرور الجديدة</string>
+    <string name="apply_filters">تطبيق التصفية</string>
+    <string name="add_a_significant_sign">اضف علامة مميزة</string>
+    <string name="signing_in">جاري تسجيل الدخول</string>
+    <string name="signing_up">جاري التسجيل</string>
+    <string name="thank_you">شكراً لك!</string>
+    <string name="your_request_to_join_ossul_is_being_reviewed_at_the_moment">جاري مراجعة طلبك في التحاقك بـ "ترفاني"</string>
+    <string name="you_will_be_notified_shortly">سيتم إشعارك قريباً</string>
+    <string name="change_date">تغيير التاريخ</string>
+    <string name="updating_property">جاري تعديل البيانات</string>
+    <string name="uploading_image">جاري حفظ الصورة</string>
+    <string name="waiting_approval">في انتظار الموافقة</string>
+    <string name="find_any_property_and_get_picked_by_nthe_broker_from_your_place">اعثر على خدمة وحدد موعد مع السائق ليأخذك للمعاينة من موقعك!</string>
+    <string name="advanced_search"><u>بحث متقدم</u></string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="signing_up_as_a_real_state">التسجيل كمقدم للخدمات يتطلب موافقة "ترفاني"</string>
+    <string name="upload_your_photo_company_logo">الرجاء اختيار صورة للمتجر أو لك</string>
+    <string name="i_agree_to_the_terms_and_conditions">أوافق على الشروط والأحكام</string>
+    <string name="name">الأسم</string>
+    <string name="capture_new_photo">التقط صورة جديدة</string>
+    <string name="pick_from_gallery">اختر من الاستوديو</string>
+    <string name="results_found">نتائج وجدت</string>
+    <string name="edit_appointment">تعديل الموعد</string>
+    <string name="edit_appointment_question">هل تريد تعديل الموعد</string>
+    <string name="title">عنوان الأعلان</string>
+
+
+</resources>

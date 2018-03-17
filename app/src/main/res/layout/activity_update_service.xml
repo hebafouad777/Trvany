@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_property"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mediaoasis.ossul.activities.provider.AddPropertyActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/toolbarBack"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/back"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTitleToolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="@string/edit_property_2"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@color/green"
+        android:gravity="center_vertical"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:text="@string/add_your_property_details_below"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/txtPropertyTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/gray_bg"
+                        android:hint="Title"
+                        android:imeOptions="actionNext"
+                        android:padding="4dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <!--<LinearLayout-->
+                            <!--android:id="@+id/linearCountrySpinner"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="0dp"-->
+                            <!--android:layout_marginBottom="16dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:background="@color/gray_bg"-->
+                            <!--android:gravity="center">-->
+
+                            <!--<Spinner-->
+                                <!--android:id="@+id/spinnerFilterCountry"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="40dp"></Spinner>-->
+
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:id="@+id/linearCitySpinner"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="0dp"-->
+                            <!--android:layout_marginBottom="16dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:background="@color/gray_bg"-->
+                            <!--android:gravity="center">-->
+
+                            <!--<Spinner-->
+                                <!--android:id="@+id/spinnerFilterCities"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="40dp"></Spinner>-->
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:id="@+id/linearTypeSpinner"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="0dp"-->
+                            <!--android:layout_marginBottom="16dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:background="@color/gray_bg"-->
+                            <!--android:gravity="center">-->
+
+                            <!--<Spinner-->
+                                <!--android:id="@+id/spinnerFilterPropertyType"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="40dp"></Spinner>-->
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:id="@+id/linearOfferSpinner"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="0dp"-->
+                            <!--android:layout_marginBottom="16dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:background="@color/gray_bg"-->
+                            <!--android:gravity="center">-->
+
+                            <!--<Spinner-->
+                                <!--android:id="@+id/spinnerFilterOffer"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="40dp"></Spinner>-->
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center">-->
+
+                        <!--<Spinner-->
+                        <!--android:id="@+id/spinnerFilterPriceRange"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="40dp"></Spinner>-->
+                        <!--</LinearLayout>-->
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/area"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center">
+
+                                <ProgressBar
+                                    android:id="@+id/prog"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="3dp" />
+
+                                <RadioGroup
+                                    android:id="@+id/radioGroupAreas"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </FrameLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:minHeight="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gray_bg">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="37dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/pin_orange" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <TextView
+                                android:id="@+id/txtPropertyLocationName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/property_location" />
+
+                            <TextView
+                                android:id="@+id/txtPropertyLocationAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/address" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/txtPropertyDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gray_bg"
+                        android:hint="@string/describe_your_property"
+                        android:padding="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtPriceLable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/price"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/txtPropertyPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/gray_bg"
+                        android:hint="@string/price"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:padding="4dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginBottom="16dp">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerViewGallery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:background="@color/gray_bg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/buttonPropertyAddImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/add_photos_btn"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="60dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:background="@drawable/add_photos_btn" />-->
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:gravity="center"-->
+                        <!--android:background="@drawable/edit_text_curve"-->
+                        <!--android:text="Upload Furniture Image"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="14sp" />-->
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/linearSchdule"-->
+                    <!--android:layout_width="250dp"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_margin="16dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/edit_text_curve_green"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="8dp">-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="27dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_margin="4dp"-->
+                    <!--android:background="@drawable/car" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_margin="4dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="Upload Furniture Photos"-->
+                    <!--android:textColor="@color/white" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <Button
+                        android:id="@+id/textDeleteProperty"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/delete_property"
+                        android:textColor="@color/orange"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/buttonPropertySaveEdit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/green"
+            android:text="@string/save_changes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

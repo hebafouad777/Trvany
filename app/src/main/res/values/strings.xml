@@ -1,0 +1,303 @@
+<resources>
+    <string name="app_name">Trvany</string>
+
+    <!--<string name="google_maps_key">AIzaSyA5NmvGi2bGLxAALMJJyeKzG4o16x39UWc</string>-->
+    <string name="google_maps_key">AIzaSyDyHcLahpfZuemB9am4GV6ah16gRgDr-_o</string>
+    <string name="google_maps_directions_key">AIzaSyBHUuPR0tRBkjIs6cd_-R8Li2hZmbpySpQ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Full Name</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="forget_your_password">Forget your Password?</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="send">Send</string>
+    <string name="no_internet_con">No Internet Connection...</string>
+    <string name="empty_email">Email is Empty</string>
+    <string name="empty_password">Password is Empty</string>
+    <string name="loading">Loading....</string>
+    <string name="service_taxi">Furniture Taxi</string>
+    <string name="get_ride">Get A Ride</string>
+    <string name="title_activity_main">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="nav_history">History</string>
+
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Search for Furniture</string>
+    <string name="nav_orders">Appointments</string>
+    <string name="nav_messages">Messages</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_change_password">Change Password</string>
+    <string name="nav_signout">Sign out</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="submit_new_password">SUBMIT NEW PASSWORD</string>
+    <string name="repeat_new_password">Repeat New Password</string>
+    <string name="new_password">New Password</string>
+    <string name="old_password">Old Password</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Search for Furniture</item>
+        <item>Appointments</item>
+        <item>Messages</item>
+        <item>Profile</item>
+        <item>Settings</item>
+        <item>History</item>
+        <item>Sign out</item>
+    </string-array>
+
+    <string-array name="nav_item_activity2_titles">
+        <item>@string/my_properties</item>
+        <item>Appointments</item>
+        <item>Messages</item>
+        <item>Profile</item>
+        <item>Settings</item>
+        <item>History</item>
+        <item>Sign out</item>
+    </string-array>
+
+    <string name="gps_enable">GPS is Disabled, Please Enable GPS to find your location</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="my_location">My Pickup Location</string>
+    <string name="request_a_driver">Request a Driver</string>
+    <string name="submit">SUBMIT</string>
+    <string name="write_a_hint_place">write a hint place</string>
+    <string name="yes_please">YES, PLEASE!</string>
+    <!--<string name="title_activity_select_driver">SelectDriverActivity</string>-->
+    <string name="login">Login</string>
+    <string name="pickup_location">Pickup Location</string>
+    <string name="my_properties">My Furniture</string>
+    <string name="history">History</string>
+    <string name="address">Address</string>
+    <string name="nav_noti">Notifications</string>
+    <string name="create_order">Create Order</string>
+    <string name="push_notifications">Enable App to Send Push Notifications</string>
+    <string name="settings_updated">Settings have been updated!</string>
+    <!--<string name="price_per_month">Price per Month</string>-->
+    <string name="price">Price</string>
+    <string name="confirm_term_error">You must Confirm on the term above</string>
+    <string name="all_areas">All Areas</string>
+    <!--<string name="sell">Women</string>-->
+    <!--<string name="rent">Men</string>-->
+    <!--<string name="studio">Hairstyle</string>-->
+    <!--<string name="flat">SPA</string>-->
+    <!--<string name="villa">Body Care</string>-->
+    <!--<string name="land">Steam Bath</string>-->
+    <string name="select_image">Select an image..</string>
+    <string name="property_location_error">Please Choose a Location for your Salon</string>
+    <string name="upload_failed">Uploaded Failed..</string>
+    <string name="uploaded_success">Uploaded Successfully..</string>
+    <string name="percent_uploaded">% uploaded</string>
+    <string name="error_happened">Error happened:</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="welcome">Welcome,</string>
+    <string name="account_activation_error">Your Account has not been activated yet!</string>
+    <string name="egypt">Egypt</string>
+    <string name="egp">EGP</string>
+    <string name="ksa">Saudi Arabia</string>
+    <string name="sar">SAR</string>
+    <string name="property_no_requests">This furniture has not any requests</string>
+    <string name="this_property_has">This furniture has</string>
+    <string name="request">Request</string>
+    <string name="this_property_have">This furniture have</string>
+    <string name="requests">Requests</string>
+    <string name="location_permission_error">Location Permissions are needed to show you location on map</string>
+    <string name="cant_get_pickup">Can\'t get pickup name and address!</string>
+    <string name="permission_not_granted">Permission was not granted</string>
+    <string name="client_name">Client Name :</string>
+    <string name="pickup_sign">Pickup Sign :</string>
+    <string name="pending_approval">Pending Approval</string>
+    <string name="approved">Approved</string>
+    <string name="waiting_your_approval">Waiting your Approval</string>
+    <string name="you_canceled_order">Order Canceled</string>
+    <string name="canceled_by_broker">Canceled by Provider</string>
+    <string name="canceled_by_user">Canceled by Client</string>
+    <string name="action">ACTION</string>
+    <string name="no_changes_to_apply">No Changes to Apply!</string>
+    <string name="appointment_edited">Appointment is edited Successfully!</string>
+    <string name="apply_changes">Apply Changes</string>
+    <string name="edit_failed">Edit is Failed!</string>
+    <string name="cancel_request_question">Do you want to cancel this order?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="order_canceled">Order Canceled Successfully..</string>
+    <string name="order_cancel_failed">Failed to Request Order, Try Again!</string>
+    <string name="approve_order_question">Do you want to approve this order?</string>
+    <string name="order_approved">Order Approved Successfully..</string>
+    <string name="failed_to_approve_order">Failed to Request Order, Try Again!</string>
+    <string name="call_permission_needed">Call Permissions are needed to show you set up call</string>
+    <string name="delete_property_question">Do you want to delete this furniture permanently?</string>
+    <string name="delete_property">Delete Furniture</string>
+    <string name="cancel_requests">Please, Cancel your requests and try again...</string>
+    <string name="you_have">You have</string>
+    <string name="requests_from_clients">requested orders from your clients</string>
+    <string name="property_deleted">Furniture Deleted Successfully!</string>
+    <string name="property_delete_failed">Failed to delete furniture..</string>
+    <string name="required">Required</string>
+    <string name="msg_send_err">Message is not sent, please try again</string>
+    <string name="location_shared">Location Shared Successfully</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="sent_success">Sent Successfully..</string>
+    <string name="cancel_appointment">Cancel Appointment</string>
+    <string name="approve_order">Approve Order</string>
+    <string name="mark_as_complete">Mark as Complete</string>
+    <string name="order_is_done">Order is Done?</string>
+    <string name="order_complete_question">Do you want to mark this order as complete?</string>
+    <string name="order_is_complete">Order is Set Successfully..</string>
+    <string name="order_complete_failed">Failed to Mark as Complete, Try Again!</string>
+    <string name="score">Score :</string>
+    <string name="review_empty">review field is empty!</string>
+    <string name="you_didnot_rate_broker">you didn\'t rate the provider</string>
+    <string name="posting_rate">Posting your rate...</string>
+    <string name="latitude">Latitude :</string>
+    <string name="longitude">Longitude :</string>
+    <string name="create_order_question">Do you want to create request for this furniture?</string>
+    <string name="request_order_failed">Failed to Request Order, Try Again!</string>
+    <string name="something_went_wrong">Something went wrong...</string>
+    <string name="order_fees_will_be">Furniture fees will be</string>
+    <string name="do_you_want_to_confirm">Do you want to Confirm Order?</string>
+    <string name="no_results_found">No Results Found!</string>
+    <string name="requests_found">Requests Found!</string>
+    <string name="conversations_found">Conversations Found!</string>
+    <string name="no_conversations">No Conversations Yet!</string>
+    <string name="history_found">Orders in History Found!</string>
+    <string name="no_history_yet">No History Yet!</string>
+    <string name="properties_found">Properties Found!</string>
+    <string name="login_failed">Login failed,</string>
+    <string name="sign_in_as_a_user">Your Account is registered as a user!, Please Sign in as a User</string>
+    <string name="real_state_broker">Salon</string>
+    <string name="freelancer_broker">Freelancer Provider</string>
+    <string name="property_owner">Furniture Owner</string>
+    <string name="register_failed">Register failed,</string>
+    <string name="add_company_logo">You must add salon logo..</string>
+    <string name="password_not_matched">Password is not matched with the above one</string>
+    <string name="agree_terms">You Must Agree to the Terms and Conditions!</string>
+    <string name="data_saved">Data Saved Successfully!</string>
+    <string name="account_deleted">Account deleted</string>
+    <string name="search_real_state">SEARCH BEAUTY SERVICES</string>
+    <string name="updating_settings">Updating your Settings....</string>
+    <string name="add_new_property">ADD NEW SERVICE</string>
+    <string name="add_your_property_details_below">Add your furniture details below</string>
+    <string name="area">Area</string>
+    <string name="property_location">Furniture Location</string>
+    <string name="describe_your_property">Describe your furniture</string>
+    <string name="add_property">Add Furniture</string>
+    <string name="broker_info">PROVIDER INFO</string>
+    <string name="the_broker_s_reviews">The Provider\'s Reviews</string>
+    <string name="scheudle_a_broker_pickup">SCHEUDLE A PROVIDER PICKUP</string>
+    <string name="call_broker">Call Provider</string>
+    <string name="start_chat">Start Chat</string>
+    <string name="chat">Chat</string>
+    <string name="appointment_details">APPOINTMENT DETAILS</string>
+    <string name="appointment_details_2">Appointment Details</string>
+    <string name="your_pickup_location">Your Pickup Location</string>
+    <string name="pickup_featured_name">PICKUP FEATURED NAME</string>
+    <string name="pickup_address">PICKUP ADDRESS</string>
+    <string name="no_sign_indicated">NO SIGN INDICATED</string>
+    <string name="change">Change</string>
+    <string name="your_booking_details">Your Booking Details</string>
+    <string name="remind_me">Remind Me</string>
+    <string name="update_appointment_data">Update Appointment Data</string>
+    <string name="your_pickup_location_2">YOUR PICKUP LOCATION</string>
+    <string name="your_current_location">YOUR CURRENT LOCATION</string>
+    <string name="change_pickup_place">Change Pickup Place</string>
+    <string name="add_sign">Add Sign</string>
+    <string name="next"><![CDATA[NEXT >]]></string>
+    <string name="property_details">SERVICE DETAILS</string>
+    <string name="this_property_is_offered_by">This furniture is offered by</string>
+    <string name="broker_name">provider name</string>
+    <string name="broker_address">provider address</string>
+    <string name="property_title">Furniture title..</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="offer">Offer</string>
+    <string name="properties_offered_by">Furniture offered by</string>
+    <string name="scheudle_a_pickup_for_this_property">SCHEUDLE A PICKUP FOR THIS SERVICE</string>
+    <string name="property_type">Furniture Type</string>
+    <string name="type">Type</string>
+    <string name="offer_type">Offer Type</string>
+    <string name="loading_requests">Loading Requests.....</string>
+    <string name="edit_property">Edit Furniture</string>
+    <string name="property_location_2">SERVICE LOCATION</string>
+    <string name="done">Done</string>
+    <string name="appointment_date_and_time">Order date and time</string>
+    <string name="call_client">Call Client</string>
+    <string name="schedule_your_pickup">SCHEDULE YOUR PICKUP</string>
+    <string name="save">SAVE</string>
+    <string name="search_for_property">SEARCH FOR SERVICE</string>
+    <string name="search_filters">Search Filters</string>
+    <string name="map_view">Map View</string>
+    <string name="list_view">List View</string>
+    <string name="edit_property_2">EDIT SERVICE</string>
+    <string name="are_you_a_real_state_agent">Are you a furniture provider?</string>
+    <string name="access_as_an_agent">Access as an Provider</string>
+    <string name="attach_image">Attach Image</string>
+    <string name="share_your_location">Share Your Location</string>
+    <string name="change_pickup_location">Change Pickup Location</string>
+    <string name="confirm_edit">Confirm Edit</string>
+    <string name="do_you_confirm_editing_this_appointment">Do you confirm editing this appointment?</string>
+    <string name="confirm">Confirm</string>
+    <string name="delete_image">Delete Image</string>
+    <string name="do_you_want_to_delete_this_image">Do you want to delete this image?</string>
+    <string name="delete">Delete</string>
+    <string name="deleting">deleting ...</string>
+    <string name="write_your_email">Write your Email</string>
+    <string name="i_confirm_hereby_that_i_will_pay_2_5_to_ossul_real_estate_from_any_deal_i_do_through_ossul_app">I confirm hereby that I will pay 1% to Trvany from any deal I do through Trvany App.</string>
+    <string name="order_fees">Order Fees</string>
+    <string name="calculating_order_fees">Calculating Service Fees...</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="show_details">Show Details</string>
+    <string name="describtion">describtion</string>
+    <string name="rate_broker">Rate Provider</string>
+    <string name="rate_this_broker_and_its_service_offered_to_you">Rate this provider and his furniture offered to you</string>
+    <string name="write_your_feedback">Write your feedback</string>
+    <string name="enter_your_new_password">Enter your New Password</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="add_a_significant_sign">ADD A SIGNIFICANT SIGN</string>
+    <string name="signing_in">Signing In</string>
+    <string name="signing_up">Signing Up</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="your_request_to_join_ossul_is_being_reviewed_at_the_moment">Your request to join Trvany is being reviewed at the moment</string>
+    <string name="you_will_be_notified_shortly">You will be notified shortly</string>
+    <string name="change_date">Change Date</string>
+    <string name="updating_property">Updating Furniture</string>
+    <string name="uploading_image">Uploading Image</string>
+    <string name="waiting_approval">Waiting Approval</string>
+    <string name="find_any_property_and_get_picked_by_nthe_broker_from_your_place">Find any furniture and get picked by the provider from your place...</string>
+    <string name="advanced_search"><u>Advanced Search</u></string>
+    <string name="change_password">Change Password</string>
+    <string name="signing_up_as_a_real_state">Signing up as a real state agent requires a verification and confirmation by Ossul</string>
+    <string name="upload_your_photo_company_logo">Upload your photo/company logo</string>
+    <string name="i_agree_to_the_terms_and_conditions">I agree to the terms and conditions</string>
+    <string name="name">Name</string>
+    <string name="capture_new_photo">Capture New Photo</string>
+    <string name="pick_from_gallery">Pick from Gallery</string>
+    <string name="results_found">Results Found!</string>
+    <string name="edit_appointment">Edit Appointment</string>
+    <string name="edit_appointment_question">Are you sure you want to edit the appointment?</string>
+    <string name="title">Title</string>
+    <string name="create_new_account">Please, create a new account as a provider..</string>
+    <string name="good_luck">Good Luck!</string>
+    <string name="thank_you_joining_jaxi">Thank you joining Trvany team</string>
+    <string name="name_empty">Name is Empty</string>
+    <string name="phone_empty">Phone is Empty</string>
+    <string name="let_s_start">Let\'s Start</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="create_new_account">الرجاء انشاء حساب جديد كمدعم خدمات..</string>
+    <string name="good_luck">نتمنى لكم التوفيق</string>
+    <string name="thank_you_joining_jaxi">شكرا لانضمامك لفريق ترفاني</string>
+
+    <string name="empty_password">كلمة المرور مفقودة</string>
+    <string name="name_empty">الاسم مفقود</string>
+    <string name="phone_empty">رقم الهاتف مفقود</string>
+    <string name="let_s_start">هيا بنا فلنبدأ!</string>
+</resources>
