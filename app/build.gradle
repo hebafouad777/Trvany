@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    buildToolsVersion '27.0.2'
     defaultConfig {
         applicationId "com.mediaoasis.trvany"
         minSdkVersion 17
@@ -17,10 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -30,18 +34,16 @@ dependencies {
     compile 'com.google.firebase:firebase-messaging:11.0.4'
     compile 'com.google.android.gms:play-services-maps:11.0.4'
     compile 'com.google.android.gms:play-services-places:11.0.4'
-
     compile 'com.android.support:appcompat-v7:26+'
     compile 'com.android.support:design:26+'
     compile 'com.android.support:support-v4:26+'
     compile 'com.android.support:recyclerview-v7:26+'
     compile 'com.android.support:cardview-v7:26+'
-
     compile 'de.hdodenhof:circleimageview:2.0.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'uk.co.chrisjenx:calligraphy:2.2.0'
-//    compile 'com.github.chrisbanes:PhotoView:2.1.2'
+    //    compile 'com.github.chrisbanes:PhotoView:2.1.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 }
