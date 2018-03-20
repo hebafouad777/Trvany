@@ -12,15 +12,7 @@ public class User {
     private String Country;
     private String Language;
 
-    public String getPassword() {
-        return Password;
-    }
 
-    public void setPassword(String password) {
-        Password = password;
-    }
-
-    private String Password;
     private String PhotoURI;
     private int AllowNotifications;
 
@@ -31,7 +23,7 @@ public class User {
     public User(String username, String email,String password) {
         this.username = username;
         this.email = email;
-        this.Password=password;
+
     }
 
     public String getUserID() {

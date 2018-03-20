@@ -106,7 +106,7 @@ public class SignUpFragment extends Fragment {
         mUser.setEmail(Email);
         mUser.setUsername(Username);
         mUser.setPhone(Phone);
-        mUser.setPassword(Password);
+
         mUser.setPhotoURI("https://firebasestorage.googleapis.com/v0/b/ossul-9a87f.appspot.com/o/" +
                 "users%20pictures%2Fperson.png?alt=media&token=91a2d3db-28da-43c1-afa5-7f9a66e2351c");
 

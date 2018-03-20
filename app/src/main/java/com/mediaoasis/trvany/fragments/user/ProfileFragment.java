@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -63,7 +64,7 @@ public class ProfileFragment extends Fragment {
     StorageReference storageReference;
     DatabaseReference databaseReference;
     Bitmap bitmap;
-    ProgressDialog progressDialog;
+
     User user;
 
     @Override
@@ -103,7 +104,7 @@ public class ProfileFragment extends Fragment {
                     user = dataSnapshot.getValue(User.class);
                     name_et.setText(user.getUsername());
                     phone_et.setText(user.getPhone());
-                    UserPassword = user.getPassword();
+
                     Picasso.with(getActivity()).load(user.getPhotoURI()).into(img);
                 }
 
@@ -328,33 +329,45 @@ public class ProfileFragment extends Fragment {
                             && !textConfirmNew.getText().toString().equals("")) {
                         if (textNew.getText().toString().equals(textConfirmNew.getText().toString())) {
                             String newPassword = textNew.getText().toString();
-
                             final ProgressDialog progressDialog = new ProgressDialog(getActivity());
                             progressDialog.setMessage("Sending....");
                             progressDialog.setTitle("Change Password");
-                            progressDialog.show();
-                            if(UserPassword .equals(textOld)) {
 
-                                firebaseUser.updatePassword(newPassword)
-                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if (task.isSuccessful()) {
-                                                    Toast.makeText(getActivity(), "User password Updated", Toast.LENGTH_SHORT).show();
-                                                } else {
-                                                    Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                                }
-                                                progressDialog.dismiss();
+
+
+                            firebaseAuth.signInWithEmailAndPassword(user.getEmail(), textOld.getText().toString())
+                                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                            if (task.isSuccessful()) {
+
+                                                progressDialog.show();
+                                                firebaseUser.updatePassword(newPassword)
+                                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                            @Override
+                                                            public void onComplete(@NonNull Task<Void> task) {
+                                                                if (task.isSuccessful()) {
+                                                                    Toast.makeText(getActivity(), "User password Updated", Toast.LENGTH_SHORT).show();
+                                                                    progressDialog.dismiss();
+                                                                    dialog.dismiss();
+                                                                } else {
+                                                                    Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                                                    progressDialog.dismiss();
+                                                                    dialog.dismiss();
+                                                                }
+                                                                progressDialog.dismiss();
+                                                            }
+                                                        });
+
+                                            } else {
+                                               textOld.setError("Wrong Password");
+
                                             }
-                                        });
+                                        }
+                                    });
 
 
-                                dialog.dismiss();
-                            }
-                            else
-                            {
-                                textOld.setError("Wrong Password");
-                            }
+
                         } else
                             textConfirmNew.setError("Value not same as new password");
                     } else {
