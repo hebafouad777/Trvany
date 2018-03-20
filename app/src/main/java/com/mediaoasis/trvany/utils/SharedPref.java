@@ -57,4 +57,5 @@ public class SharedPref {
        setString("lang", curLang);
        LocaleExchange.updateResources(context, curLang);
    }
+
 }

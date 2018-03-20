@@ -5,7 +5,22 @@ package com.mediaoasis.trvany.models;
  */
 
 public class User {
-    private String UserID, username, email, Phone, Country, Language;
+    private String UserID;
+    private String username;
+    private String email;
+    private String Phone;
+    private String Country;
+    private String Language;
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
+
+    private String Password;
     private String PhotoURI;
     private int AllowNotifications;
 
@@ -13,9 +28,10 @@ public class User {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public User(String username, String email) {
+    public User(String username, String email,String password) {
         this.username = username;
         this.email = email;
+        this.Password=password;
     }
 
     public String getUserID() {

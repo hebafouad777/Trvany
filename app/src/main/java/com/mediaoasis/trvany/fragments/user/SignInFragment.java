@@ -158,6 +158,7 @@ public class SignInFragment extends Fragment {
                 progressDialog.setTitle(getString(R.string.login));
                 progressDialog.show();
 
+
                 firebaseAuth.signInWithEmailAndPassword(Email, Password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -176,7 +177,7 @@ public class SignInFragment extends Fragment {
                         });
             } else
                 Toast.makeText(getActivity(), R.string.no_internet_con, Toast.LENGTH_SHORT).show();
-            progressDialog.dismiss();
+
         }
 //        else
 //            Toast.makeText(getActivity(), "Login failed 3aaaa", Toast.LENGTH_SHORT).show();
@@ -199,7 +200,7 @@ public class SignInFragment extends Fragment {
                     getActivity().finish();
 
                 } else {
-                    progressDialog.dismiss();
+
                     Toast.makeText(getActivity(), "Your data is missing as a User!\nTry to login as an agent.."
                             , Toast.LENGTH_LONG);
 
@@ -209,7 +210,7 @@ public class SignInFragment extends Fragment {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Toast.makeText(getActivity(), databaseError.getMessage(), Toast.LENGTH_LONG).show();
-                progressDialog.dismiss();
+
             }
         });
     }

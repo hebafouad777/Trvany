@@ -249,33 +249,51 @@ public class AddServiceActivity extends AppCompatActivity {
     }
 
     private void showPercentageDialog() {
-        final Dialog dialog = new Dialog(AddServiceActivity.this);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.dialog_percentage_confirmation);
 
-        final boolean[] isChecked = {false};
+        if(title_et.getText().toString().isEmpty())
+        {
+            Toast.makeText(getApplicationContext(),"Title Cannot be empty",Toast.LENGTH_LONG).show();
 
-        CheckBox checkBox = (CheckBox) dialog.findViewById(R.id.checkboxPercent);
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                isChecked[0] = b;
-            }
-        });
+        }
+        else if (description_et.getText().toString().isEmpty())
+        {
+            Toast.makeText(getApplicationContext(),"Description Cannot be empty",Toast.LENGTH_LONG).show();
 
-        Button done_btn = (Button) dialog.findViewById(R.id.buttonDialogConfirmDone);
-        done_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (isChecked[0])
-                    addServiceToBrokerServices();
-                else
-                    Toast.makeText(AddServiceActivity.this, R.string.confirm_term_error, Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
-            }
-        });
+        }
+        else if (price_et.getText().toString().isEmpty())
+        {
+            Toast.makeText(getApplicationContext(),"Price Cannot be empty",Toast.LENGTH_LONG).show();
 
-        dialog.show();
+        }
+        else {
+            final Dialog dialog = new Dialog(AddServiceActivity.this);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.dialog_percentage_confirmation);
+
+            final boolean[] isChecked = {false};
+
+            CheckBox checkBox = (CheckBox) dialog.findViewById(R.id.checkboxPercent);
+            checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    isChecked[0] = b;
+                }
+            });
+
+            Button done_btn = (Button) dialog.findViewById(R.id.buttonDialogConfirmDone);
+            done_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (isChecked[0])
+                        addServiceToBrokerServices();
+                    else
+                        Toast.makeText(AddServiceActivity.this, R.string.confirm_term_error, Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.show();
+        }
 
 
     }

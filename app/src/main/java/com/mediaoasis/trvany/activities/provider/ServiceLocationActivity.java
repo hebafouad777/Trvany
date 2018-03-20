@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.places.AutocompleteFilter;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
@@ -84,8 +85,13 @@ public class ServiceLocationActivity extends AppCompatActivity implements OnMapR
             gpsTracker.showSettingsAlert();
         }
 
+
         autocompleteFragment = (PlaceAutocompleteFragment)
                 getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment2);
+        AutocompleteFilter typeFilter = new AutocompleteFilter.Builder()
+                .setTypeFilter(AutocompleteFilter.TYPE_FILTER_GEOCODE)
+                .build();
+        autocompleteFragment.setFilter(typeFilter);
 
         autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
             @Override
@@ -133,6 +139,7 @@ public class ServiceLocationActivity extends AppCompatActivity implements OnMapR
     void zoomOnMarker(LatLng coordinate) {
         CameraUpdate yourLocation = CameraUpdateFactory.newLatLngZoom(coordinate, 15);
         googleMap.animateCamera(yourLocation);
+
     }
 
     private void getLocation() {
@@ -167,7 +174,7 @@ public class ServiceLocationActivity extends AppCompatActivity implements OnMapR
         try {
 
             List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
-            if (addresses.size() > 1) {
+            if (addresses.size() > 1||addresses.size()==1) {
                 Address obj = addresses.get(0);
                 String add = obj.getAddressLine(0);
                 String currentAddress = obj.getSubAdminArea() + ","

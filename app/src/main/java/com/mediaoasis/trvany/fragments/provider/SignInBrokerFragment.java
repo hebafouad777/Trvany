@@ -163,6 +163,7 @@ public class SignInBrokerFragment extends Fragment {
                             }
                         });
             } else {
+
                 Toast.makeText(getActivity(), R.string.no_internet_con, Toast.LENGTH_SHORT).show();
             }
         }

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Trvany.iml" filepath="$PROJECT_DIR$/Trvany.iml" />
+      <module fileurl="file://F:\Work\Remotely\Trvany\Trvany.iml" filepath="F:\Work\Remotely\Trvany\Trvany.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\Work\Remotely\Trvany\app\app.iml" filepath="F:\Work\Remotely\Trvany\app\app.iml" />
     </modules>
   </component>
 </project>

@@ -50,6 +50,7 @@ public class ProfileFragment extends Fragment {
 
     public static boolean isPicFromCamera3 = false;
     public static int PICK_IMAGE_REQUEST = 234;
+    String UserPassword="";
     String[] perms = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
     private static final int CAM_REQUREST = 2;
     private static final int GALLERY_REQUEST_CODE = 1;
@@ -102,6 +103,7 @@ public class ProfileFragment extends Fragment {
                     user = dataSnapshot.getValue(User.class);
                     name_et.setText(user.getUsername());
                     phone_et.setText(user.getPhone());
+                    UserPassword = user.getPassword();
                     Picasso.with(getActivity()).load(user.getPhotoURI()).into(img);
                 }
 
@@ -331,22 +333,28 @@ public class ProfileFragment extends Fragment {
                             progressDialog.setMessage("Sending....");
                             progressDialog.setTitle("Change Password");
                             progressDialog.show();
+                            if(UserPassword .equals(textOld)) {
 
-                            firebaseUser.updatePassword(newPassword)
-                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            if (task.isSuccessful()) {
-                                                Toast.makeText(getActivity(), "User password Updated", Toast.LENGTH_SHORT).show();
-                                            } else {
-                                                Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                firebaseUser.updatePassword(newPassword)
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful()) {
+                                                    Toast.makeText(getActivity(), "User password Updated", Toast.LENGTH_SHORT).show();
+                                                } else {
+                                                    Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                                }
+                                                progressDialog.dismiss();
                                             }
-                                            progressDialog.dismiss();
-                                        }
-                                    });
+                                        });
 
 
-                            dialog.dismiss();
+                                dialog.dismiss();
+                            }
+                            else
+                            {
+                                textOld.setError("Wrong Password");
+                            }
                         } else
                             textConfirmNew.setError("Value not same as new password");
                     } else {
