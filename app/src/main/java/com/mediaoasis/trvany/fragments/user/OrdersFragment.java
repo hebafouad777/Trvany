@@ -122,7 +122,6 @@ public class OrdersFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-//        if (MainActivity.isOrderLoaded)
-//            ordersAdapter.notifyDataSetChanged();
+
     }
 }

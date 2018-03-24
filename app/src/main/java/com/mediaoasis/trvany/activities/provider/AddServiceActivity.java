@@ -749,6 +749,7 @@ public class AddServiceActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        if(dialog.isShowing()&& dialog!=null)
                         dialog.dismiss();
 
                         Uri uri = taskSnapshot.getDownloadUrl();

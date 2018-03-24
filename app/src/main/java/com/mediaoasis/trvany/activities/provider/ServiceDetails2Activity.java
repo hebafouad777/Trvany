@@ -39,7 +39,7 @@ public class ServiceDetails2Activity extends AppCompatActivity {
     public static ImageView img_iv;
     public static List<Order> PropertyOrders;
     HashMap<String, String> Images;
-    TextView description_tv, country_tv, city_tv, location_tv, price_tv, price2_tv, area_tv,
+    public static TextView description_tv, country_tv, city_tv, location_tv, price_tv, price2_tv, area_tv,
             title_tv, ordersNum_tv, offer_tv, type_tv;
     Button edit_btn;
     Furniture currentFurniture;

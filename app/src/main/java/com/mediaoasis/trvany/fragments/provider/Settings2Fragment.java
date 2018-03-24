@@ -29,6 +29,7 @@ import com.mediaoasis.trvany.R;
 import com.mediaoasis.trvany.activities.provider.Main2Activity;
 import com.mediaoasis.trvany.adapters.SpinnerAdapter;
 import com.mediaoasis.trvany.models.Country;
+import com.mediaoasis.trvany.models.Provider;
 import com.mediaoasis.trvany.utils.SharedPref;
 
 import java.util.ArrayList;
@@ -57,6 +58,7 @@ public class Settings2Fragment extends Fragment {
     List<String> Languages;
     int langIndex = 0, oldIndex = 0;
     String langCode = "ar";
+   Provider provider;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -83,6 +85,28 @@ public class Settings2Fragment extends Fragment {
         allowNotifications_cb = (CheckBox) getActivity().findViewById(R.id.checkboxNotifications);
         saveChanges = (Button) getActivity().findViewById(R.id.buttonSettingsSave);
 
+
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+
+        DatabaseReference databaseReference = firebaseDatabase.getReference().getRoot();
+        databaseReference.child("Providers").child(Main2Activity.currentProvider.getBrokerID()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                provider = dataSnapshot.getValue(Provider.class);
+                if (provider != null) {
+                    provider.setBrokerID(dataSnapshot.getKey());
+
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(getActivity(), databaseError.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+
         DatabaseReference countryRef = firebaseDatabase.getReference().getRoot().child("Countries");
         countryRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -97,7 +121,7 @@ public class Settings2Fragment extends Fragment {
                 country_sp.setAdapter(CountriesAdapter);
 
                 for (int i = 0; i < AllCountriesNames.size(); i++)
-                    if (AllCountriesNames.get(i).equals(Main2Activity.currentProvider.getCountry())) {
+                    if (AllCountriesNames.get(i).equals(provider.getCountry())) {
                         SelectedCountryIndex = i;
                         country_sp.setSelection(SelectedCountryIndex);
                         break;
@@ -210,7 +234,7 @@ public class Settings2Fragment extends Fragment {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
-
+                                                progressDialog.dismiss();
                                                 if (oldIndex != langIndex) {
                                                     sharedPref.setLanguage(getActivity(), langCode);
                                                     brokerRef.child("language").setValue(langCode);
@@ -218,16 +242,24 @@ public class Settings2Fragment extends Fragment {
                                                     Main2Activity.currentProvider.setCountry(AllCountriesNames.get(SelectedCountryIndex));
                                                     Main2Activity.currentProvider.setAllowNotifications(isNotificationsAllowed);
                                                     Main2Activity.currentProvider.setLanguage(langCode);
-                                                    progressDialog.dismiss();
+
                                                     Toast.makeText(getActivity(), R.string.settings_updated, Toast.LENGTH_SHORT).show();
 
                                                 }
+                                                else
+                                                    Toast.makeText(getActivity(), R.string.settings_updated, Toast.LENGTH_SHORT).show();
 
                                             }
+                                            else
+                                                progressDialog.dismiss();
                                         }
                                     });
 
 
+                        }
+                        else {
+                            Toast.makeText(getActivity(), R.string.settings_not_updated, Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
                         }
                     }
                 });

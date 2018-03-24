@@ -46,6 +46,7 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.mediaoasis.trvany.R;
+import com.mediaoasis.trvany.activities.user.PickupLocationActivity;
 import com.mediaoasis.trvany.adapters.ServiceImages2Adapter;
 import com.mediaoasis.trvany.models.Area;
 import com.mediaoasis.trvany.models.Furniture;
@@ -159,6 +160,15 @@ public class UpdateServiceActivity extends AppCompatActivity {
         LocationLatLng = new LatLng(currentFurniture.getLatitude(), currentFurniture.getLongitude());
         locationAddress_tv.setText(LocationAddress);
 
+        location_ll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UpdateServiceActivity.this, PickupLocationActivity.class);
+                intent.putExtra("UpdateService", true);
+                startActivity(intent);
+            }
+        });
+
         CityName = currentFurniture.getCity();
         getAreas();
 
@@ -189,7 +199,7 @@ public class UpdateServiceActivity extends AppCompatActivity {
                 currentFurniture.setArea(AreaName);
 
                 databaseReference = firebaseDatabase.getReference().getRoot().child("Providers")
-                        .child(currentProvider.getBrokerID()).child("Services").child(currentFurniture.getPropertyID());
+                        .child(currentProvider.getBrokerID()).child("Furniture").child(currentFurniture.getPropertyID());
 
                 databaseReference.child("title").setValue(title_et.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -224,6 +234,9 @@ public class UpdateServiceActivity extends AppCompatActivity {
                                                                                                                                 else {
                                                                                                                                     Toast.makeText(UpdateServiceActivity.this
                                                                                                                                             , R.string.data_saved, Toast.LENGTH_SHORT).show();
+                                                                                                                                   /* ServiceDetails2Activity.location_tv.setText(locationName_tv.getText()+" "+locationAddress_tv.getText(););
+                                                                                                                                    ServiceDetails2Activity.description_tv.setText(description_et.getText());
+                                                                                                                                    ServiceDetails2Activity.title_tv.setText(title_et.getText());*/
                                                                                                                                     finish();
                                                                                                                                 }
                                                                                                                             }

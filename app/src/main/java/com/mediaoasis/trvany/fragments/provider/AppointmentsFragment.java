@@ -51,7 +51,7 @@ public class AppointmentsFragment extends Fragment {
         orders_rv = (RecyclerView) getActivity().findViewById(R.id.recyclerViewOrders);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        mLayoutManager.setReverseLayout(true);
+       // mLayoutManager.setReverseLayout(true);
         orders_rv.setLayoutManager(mLayoutManager);
 
         ActiveOrders = new ArrayList<>();

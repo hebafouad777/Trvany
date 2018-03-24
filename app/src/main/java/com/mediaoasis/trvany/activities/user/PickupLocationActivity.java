@@ -35,6 +35,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.mediaoasis.trvany.R;
+import com.mediaoasis.trvany.activities.provider.AddServiceActivity;
+import com.mediaoasis.trvany.activities.provider.UpdateServiceActivity;
 import com.mediaoasis.trvany.models.Furniture;
 import com.mediaoasis.trvany.models.Provider;
 import com.mediaoasis.trvany.utils.GPSTracker;
@@ -62,7 +64,7 @@ public class PickupLocationActivity extends AppCompatActivity implements OnMapRe
 
     Provider provider;
     Furniture furniture;
-    boolean fromOrderDetails = false;
+    boolean fromOrderDetails = false,UpdateService=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +97,9 @@ public class PickupLocationActivity extends AppCompatActivity implements OnMapRe
         } else if (getIntent().getExtras().getBoolean("fromOrderDetails")) {
             fromOrderDetails = true;
         }
+        else if (getIntent().getExtras().getBoolean("UpdateService")) {
+            UpdateService = true;
+        }
 
         gpsTracker = new GPSTracker(PickupLocationActivity.this);
 //        DestinationLatLng = new LatLng(0.0, 0.0);
@@ -118,6 +123,19 @@ public class PickupLocationActivity extends AppCompatActivity implements OnMapRe
             LatLng latLng = new LatLng(OrderDetailsActivity.PickupLatitude, OrderDetailsActivity.PickupLongitude);
             PickupLocationLatLng = latLng;
         }
+        else if(UpdateService)
+        {
+            next_tv.setText(getString(R.string.save_changes));
+            sign_tv.setVisibility(View.GONE)
+            ;
+            addSign_btn.setVisibility(View.GONE);
+            changeLocation_btn.setText("Change Location");
+
+            /*locationName_tv.setText(UpdateServiceActivity);
+            locationAddress_tv.setText(OrderDetailsActivity.PickupAddress);
+            LatLng latLng = new LatLng(OrderDetailsActivity.PickupLatitude, OrderDetailsActivity.PickupLongitude);
+            PickupLocationLatLng = latLng;*/
+        }
 
         supportMapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -134,6 +152,7 @@ public class PickupLocationActivity extends AppCompatActivity implements OnMapRe
         changeLocation_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 showChangeLocationDialog();
             }
         });
@@ -148,7 +167,7 @@ public class PickupLocationActivity extends AppCompatActivity implements OnMapRe
         next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!fromOrderDetails) {
+                if (!fromOrderDetails&&!UpdateService) {
                     Intent intent = new Intent(PickupLocationActivity.this, ScheduleProviderActivity.class);
                     intent.putExtra("provider", provider);
                     intent.putExtra("furniture", furniture);
@@ -158,7 +177,20 @@ public class PickupLocationActivity extends AppCompatActivity implements OnMapRe
                     startActivity(intent);
                     overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                     finish();
-                } else {
+                }
+               else if (UpdateService)
+                {
+
+
+                    UpdateServiceActivity.LocationName = PickupLocationName;
+                    UpdateServiceActivity.LocationAddress = PickupLocationAddress;
+                    UpdateServiceActivity.LocationLatLng = PickupLocationLatLng;
+                    AddServiceActivity.showLocation = true;
+
+                    finish();
+                }
+
+               else {
                     OrderDetailsActivity.PickupAddress = PickupLocationAddress;
                     OrderDetailsActivity.PickupSign = PickupLocationSign;
                     OrderDetailsActivity.PickupName = PickupLocationName;

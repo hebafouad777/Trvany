@@ -503,4 +503,21 @@
             android:textColor="@color/white"
             android:textStyle="bold" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/buttonOrderSaveEdit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/green"
+            android:text="@string/save_changes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
 </LinearLayout>

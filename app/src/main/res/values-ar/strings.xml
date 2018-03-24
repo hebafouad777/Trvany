@@ -8,4 +8,5 @@
     <string name="name_empty">الاسم مفقود</string>
     <string name="phone_empty">رقم الهاتف مفقود</string>
     <string name="let_s_start">هيا بنا فلنبدأ!</string>
+    <string name="settings_not_updated">Failed to save</string>
 </resources>

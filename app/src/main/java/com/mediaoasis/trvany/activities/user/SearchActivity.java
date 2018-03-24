@@ -262,8 +262,8 @@ public class SearchActivity extends AppCompatActivity implements OnMapReadyCallb
         if (sharedPref.getLanguage().equals("en")) {
             CountriesAdapter = new SpinnerAdapter(SearchActivity.this, android.R.id.text1, AllCountriesNames);
             CitiesAdapter = new SpinnerAdapter(SearchActivity.this, android.R.id.text1, AllCitiesNames);
-            TypesAdapter = new SpinnerAdapter(SearchActivity.this, android.R.id.text1, MainActivity.AllTypes);
-            OffersAdapter = new SpinnerAdapter(SearchActivity.this, android.R.id.text1, MainActivity.AllOffers);
+            TypesAdapter = new SpinnerAdapter(SearchActivity.this, android.R.id.text1, MainActivity.AllTypesNames);
+            OffersAdapter = new SpinnerAdapter(SearchActivity.this, android.R.id.text1, MainActivity.AllOffersNames);
         } else if (sharedPref.getLanguage().equals("ar")) {
             CountriesAdapter = new SpinnerAdapter(SearchActivity.this, android.R.id.text1, MainActivity.AllCountriesNamesAr);
             CitiesAdapter = new SpinnerAdapter(SearchActivity.this, android.R.id.text1, AllCitiesNamesAr);
@@ -382,6 +382,7 @@ public class SearchActivity extends AppCompatActivity implements OnMapReadyCallb
         areaProgressBar = (ProgressBar) dialog.findViewById(R.id.prog);
         search_btn = (Button) dialog.findViewById(R.id.butttonFilterSearch);
         close_btn = (Button) dialog.findViewById(R.id.butttonFilterClose);
+
 
         country_sp.setAdapter(CountriesAdapter);
         city_sp.setAdapter(CitiesAdapter);

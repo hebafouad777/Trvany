@@ -28,6 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.mediaoasis.trvany.R;
 import com.mediaoasis.trvany.activities.user.MainActivity;
+import com.mediaoasis.trvany.models.Provider;
 import com.mediaoasis.trvany.models.User;
 import com.mediaoasis.trvany.utils.ConnectionDetector;
 import com.mediaoasis.trvany.utils.SharedPref;
@@ -40,7 +41,8 @@ public class SignInFragment extends Fragment {
 
     ProgressDialog progressDialog;
     String Email = "", Password = "";
-
+    Boolean Isprovider ;
+    Provider provider;
     User CurrentUser = new User();
 
     FirebaseAuth firebaseAuth;
@@ -96,6 +98,7 @@ public class SignInFragment extends Fragment {
         // set the custom dialog components - text, image and button
         final EditText text = (EditText) dialog.findViewById(R.id.edittextForgetEmail);
         text.setText(Email);
+        provider = new Provider();
 
         Button dialogButton = (Button) dialog.findViewById(R.id.buttonForgetPassword);
         // if button is clicked, close the custom dialog
@@ -164,10 +167,40 @@ public class SignInFragment extends Fragment {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    new SharedPref(getActivity()).setBoolean("isBroker", false);
-                                    Toast.makeText(getActivity(), "Login succeed, Welcome", Toast.LENGTH_SHORT).show();
 
-                                    checkDataFound(firebaseAuth.getCurrentUser());
+                                    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                                    DatabaseReference databaseReference = firebaseDatabase.getReference().getRoot();
+                                    databaseReference.child("Providers").child(firebaseAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(DataSnapshot dataSnapshot) {
+                                           provider = dataSnapshot.getValue(Provider.class);
+                                            if (provider != null) {
+                                                firebaseAuth.signOut();
+                                                progressDialog.dismiss();
+                                                Toast.makeText(getActivity(), "Please Log in with a user account", Toast.LENGTH_LONG).show();
+
+
+                                            }
+                                            else
+                                            {
+                                                new SharedPref(getActivity()).setBoolean("isBroker", false);
+                                                Toast.makeText(getActivity(), "Login succeed, Welcome", Toast.LENGTH_SHORT).show();
+                                                checkDataFound(firebaseAuth.getCurrentUser());
+                                                progressDialog.dismiss();
+                                            }
+
+
+                                        }
+
+                                        @Override
+                                        public void onCancelled(DatabaseError databaseError) {
+                                            Toast.makeText(getActivity(), databaseError.getMessage(), Toast.LENGTH_LONG).show();
+                                        }
+                                    });
+
+
+
+
 
                                 } else {
                                     Toast.makeText(getActivity(), "Login failed, " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

@@ -299,5 +299,6 @@
     <string name="name_empty">Name is Empty</string>
     <string name="phone_empty">Phone is Empty</string>
     <string name="let_s_start">Let\'s Start</string>
+    <string name="settings_not_updated">Failed to save</string>
 
 </resources>

@@ -504,4 +504,14 @@
             android:textColor="@color/white"
             android:textStyle="bold" />
     </LinearLayout>
+    <Button
+        android:id="@+id/buttonPropertySaveEdit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/green"
+        android:text="@string/save_changes"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white" />
+
 </LinearLayout>

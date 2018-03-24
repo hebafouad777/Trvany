@@ -25,6 +25,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,10 +34,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.mediaoasis.trvany.R;
 import com.mediaoasis.trvany.adapters.SpinnerAdapter;
+import com.mediaoasis.trvany.models.Furniture;
 import com.mediaoasis.trvany.models.Order;
 import com.mediaoasis.trvany.models.Provider;
 import com.mediaoasis.trvany.models.Rating;
-import com.mediaoasis.trvany.models.Furniture;
 import com.mediaoasis.trvany.view.CustomRatingBar;
 import com.squareup.picasso.Picasso;
 
@@ -62,6 +63,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
     LinearLayout date_ll, time_ll, spinnerReqDetails_ll;
     Order CurrentOrder;
     Furniture currentFurniture;
+    Button save;
     FirebaseDatabase firebaseDatabase;
     String DateToDisplay = "", TimeToDisplay = "";
 
@@ -99,6 +101,8 @@ public class OrderDetailsActivity extends AppCompatActivity {
 
         Bundle b = i.getExtras();
         isHistory = b.getBoolean("isHistory");
+        save = (Button) findViewById(R.id.buttonOrderSaveEdit);
+
 
         status_tv = (TextView) findViewById(R.id.textOrderDetailsStatus);
         date_tv = (TextView) findViewById(R.id.textOrderDetailsDate);
@@ -146,6 +150,48 @@ public class OrderDetailsActivity extends AppCompatActivity {
                 Intent intent = new Intent(OrderDetailsActivity.this, PickupLocationActivity.class);
                 intent.putExtra("fromOrderDetails", true);
                 startActivity(intent);
+            }
+        });
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseDatabase = FirebaseDatabase.getInstance();
+                DatabaseReference userOrderRef = firebaseDatabase.getReference().child("User").child(CurrentOrder.getUserID())
+                        .child("Orders").child(CurrentOrder.getOrderID());
+
+                userOrderRef.child("date").setValue(CurrentOrder.getDate()) .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                        userOrderRef.child("time").setValue(CurrentOrder.getTime()) .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                            DatabaseReference brokerOrderRef = firebaseDatabase.getReference().child("Providers")
+                                    .child(CurrentOrder.getBrokerID()).child("Orders").child(CurrentOrder.getOrderID());
+                            brokerOrderRef.child("date").setValue(CurrentOrder.getDate())
+                                   .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void aVoid) {
+                                            brokerOrderRef.child("date").setValue(CurrentOrder.getDate())
+                                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                        @Override
+                                                        public void onSuccess(Void aVoid) {
+                                        Toast.makeText(OrderDetailsActivity.this, getResources().getString(R.string.data_saved),
+                                                Toast.LENGTH_SHORT).show();
+                                        finish();
+
+                                                        }
+                                                    });
+
+                                }
+                            });
+                            }
+                        });
+
+
+                    }
+                });
+
             }
         });
 
