@@ -1,6 +1,7 @@
 package com.mediaoasis.trvany.activities.provider;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -74,6 +75,7 @@ public class UpdateServiceActivity extends AppCompatActivity {
     private static final int CAM_REQUREST = 2;
     public static String LocationName = "", LocationAddress = "";
     public static LatLng LocationLatLng = new LatLng(0, 0);
+    ProgressDialog progressDialog;
     String[] perms = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
     Furniture currentFurniture;
 
@@ -189,7 +191,10 @@ public class UpdateServiceActivity extends AppCompatActivity {
 //
 //                ImagesList2 = ImagesList;
 //                ImagesKeys2 = ImagesKeys;
-
+                progressDialog = new ProgressDialog(UpdateServiceActivity.this);
+                progressDialog.setMessage(getString(R.string.loading));
+                progressDialog.setTitle(getString(R.string.save_changes));
+                progressDialog.show();
                 currentFurniture.setTitle(title_et.getText().toString());
                 currentFurniture.setDescription(description_et.getText().toString());
                 currentFurniture.setPrice(Integer.valueOf(price_et.getText().toString()));
@@ -232,6 +237,7 @@ public class UpdateServiceActivity extends AppCompatActivity {
                                                                                                                                 if (!isUpdateFinished[0])
                                                                                                                                     isUpdateFinished[0] = true;
                                                                                                                                 else {
+                                                                                                                                    progressDialog.dismiss();
                                                                                                                                     Toast.makeText(UpdateServiceActivity.this
                                                                                                                                             , R.string.data_saved, Toast.LENGTH_SHORT).show();
                                                                                                                                    /* ServiceDetails2Activity.location_tv.setText(locationName_tv.getText()+" "+locationAddress_tv.getText(););
@@ -292,9 +298,11 @@ public class UpdateServiceActivity extends AppCompatActivity {
                                                                                                                                 if (!isUpdateFinished[0])
                                                                                                                                     isUpdateFinished[0] = true;
                                                                                                                                 else {
+                                                                                                                                    progressDialog.dismiss();
                                                                                                                                     Toast.makeText(UpdateServiceActivity.this
                                                                                                                                             , R.string.data_saved, Toast.LENGTH_SHORT).show();
                                                                                                                                     finish();
+
                                                                                                                                 }
                                                                                                                             }
                                                                                                                         });

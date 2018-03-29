@@ -101,7 +101,7 @@
     <!--<string name="villa">Body Care</string>-->
     <!--<string name="land">Steam Bath</string>-->
     <string name="select_image">Select an image..</string>
-    <string name="property_location_error">Please Choose a Location for your Salon</string>
+    <string name="property_location_error">Please Choose a Location for your Service</string>
     <string name="upload_failed">Uploaded Failed..</string>
     <string name="uploaded_success">Uploaded Successfully..</string>
     <string name="percent_uploaded">% uploaded</string>

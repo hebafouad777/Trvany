@@ -65,6 +65,7 @@ public class PickupLocationActivity extends AppCompatActivity implements OnMapRe
     Provider provider;
     Furniture furniture;
     boolean fromOrderDetails = false,UpdateService=false;
+    TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,7 @@ public class PickupLocationActivity extends AppCompatActivity implements OnMapRe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.back));
+        title = (TextView) findViewById(R.id.txtTitleToolbar) ;
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,7 +126,10 @@ public class PickupLocationActivity extends AppCompatActivity implements OnMapRe
             PickupLocationLatLng = latLng;
         }
         else if(UpdateService)
+
         {
+            title.setText(getResources().getString(R.string.property_location));
+
             next_tv.setText(getString(R.string.save_changes));
             sign_tv.setVisibility(View.GONE)
             ;

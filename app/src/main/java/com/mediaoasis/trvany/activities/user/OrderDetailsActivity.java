@@ -172,7 +172,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
-                                            brokerOrderRef.child("date").setValue(CurrentOrder.getDate())
+                                            brokerOrderRef.child("time").setValue(CurrentOrder.getTime())
                                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                         @Override
                                                         public void onSuccess(Void aVoid) {

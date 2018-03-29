@@ -29,6 +29,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -54,12 +55,14 @@ public class RequestDetailsActivity extends AppCompatActivity implements Activit
     private static final int CALL_REQUEST_CODE = 200;
     String[] permsCall = new String[]{"android.permission.CALL_PHONE"};
     TextView clientName_tv, pickupLocation_tv, pickupSign_tv, propertyTitle_tv, orderPrice_tv, status_tv, date_tv, time_tv;
-    Button callClient_btn, chatClient_btn, changeDate_btn, changeTime_btn;
+    Button callClient_btn, chatClient_btn;
     ImageView propertyImg;
-    LinearLayout spinnerReqDetails_ll;
+    LinearLayout date_ll, time_ll,spinnerReqDetails_ll;
     CircleImageView clientImg;
     CheckBox checkBox;
     Spinner spinner;
+    Button save;
+
 
     Order CurrentOrder;
     String DateToDisplay = "", TimeToDisplay = "";
@@ -100,6 +103,9 @@ public class RequestDetailsActivity extends AppCompatActivity implements Activit
         Bundle b = i.getExtras();
         isHistory = b.getBoolean("isHistory");
 
+
+
+
         clientName_tv = (TextView) findViewById(R.id.textClientName);
         pickupLocation_tv = (TextView) findViewById(R.id.textPickupLocation);
         pickupSign_tv = (TextView) findViewById(R.id.textPickupLocationSign);
@@ -112,8 +118,6 @@ public class RequestDetailsActivity extends AppCompatActivity implements Activit
 
         callClient_btn = (Button) findViewById(R.id.buttonCallBroker);
         chatClient_btn = (Button) findViewById(R.id.buttonMsgBroker);
-        changeDate_btn = (Button) findViewById(R.id.buttonChangeDate);
-        changeTime_btn = (Button) findViewById(R.id.buttonChangeTime);
 
         propertyImg = (ImageView) findViewById(R.id.imgPropertyImage);
         clientImg = (CircleImageView) findViewById(R.id.imgClient);
@@ -129,7 +133,24 @@ public class RequestDetailsActivity extends AppCompatActivity implements Activit
         orderPrice_tv.setText(CurrentOrder.getFees());
         date_tv.setText(CurrentOrder.getDate());
         time_tv.setText(CurrentOrder.getTime());
+        save = (Button) findViewById(R.id.buttonOrderSaveEdit);
+        date_ll = (LinearLayout) findViewById(R.id.linearOrderDate);
+        time_ll = (LinearLayout) findViewById(R.id.linearOrderTime);
+        date_ll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDatePickerDialog();
 
+            }
+        });
+
+        time_ll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showTimePickerDialog();
+
+            }
+        });
 
         if (CurrentOrder.getStatus().equals("edited by user")) {
             status_tv.setText(R.string.waiting_your_approval);
@@ -191,6 +212,48 @@ public class RequestDetailsActivity extends AppCompatActivity implements Activit
                 setToNoActionMode();
             }
         }
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseDatabase = FirebaseDatabase.getInstance();
+                DatabaseReference userOrderRef = firebaseDatabase.getReference().child("User").child(CurrentOrder.getUserID())
+                        .child("Orders").child(CurrentOrder.getOrderID());
+
+                userOrderRef.child("date").setValue(CurrentOrder.getDate()) .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                        userOrderRef.child("time").setValue(CurrentOrder.getTime()) .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                DatabaseReference brokerOrderRef = firebaseDatabase.getReference().child("Providers")
+                                        .child(CurrentOrder.getBrokerID()).child("Orders").child(CurrentOrder.getOrderID());
+                                brokerOrderRef.child("date").setValue(CurrentOrder.getDate())
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+                                                brokerOrderRef.child("time").setValue(CurrentOrder.getTime())
+                                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                            @Override
+                                                            public void onSuccess(Void aVoid) {
+                                                                Toast.makeText(RequestDetailsActivity.this, getResources().getString(R.string.data_saved),
+                                                                        Toast.LENGTH_SHORT).show();
+                                                                finish();
+
+                                                            }
+                                                        });
+
+                                            }
+                                        });
+                            }
+                        });
+
+
+                    }
+                });
+
+            }
+        });
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -224,22 +287,8 @@ public class RequestDetailsActivity extends AppCompatActivity implements Activit
             }
         });
 
-        changeDate_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Toast.makeText(RequestDetailsActivity.this, "Not Implemented YET !", Toast.LENGTH_SHORT).show();
-                showDatePickerDialog();
-            }
-        });
 
 
-        changeTime_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Toast.makeText(RequestDetailsActivity.this, "Not Implemented YET !", Toast.LENGTH_SHORT).show();
-                showTimePickerDialog();
-            }
-        });
 
         chatClient_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -265,8 +314,9 @@ public class RequestDetailsActivity extends AppCompatActivity implements Activit
     }
 
     private void setToNoActionMode() {
-        changeDate_btn.setVisibility(View.GONE);
-        changeTime_btn.setVisibility(View.GONE);
+
+        date_ll.setClickable(false);
+        time_ll.setClickable(false);
         checkBox.setVisibility(View.GONE);
         spinnerReqDetails_ll.setVisibility(View.GONE);
     }
@@ -494,7 +544,8 @@ public class RequestDetailsActivity extends AppCompatActivity implements Activit
     }
 
     private void approveOrder() {
-        CurrentOrder.setStatus("edited by user");
+        CurrentOrder.setStatus("approved");
+
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference userRef = firebaseDatabase.getReference().child("User").child(CurrentOrder.getUserID())
